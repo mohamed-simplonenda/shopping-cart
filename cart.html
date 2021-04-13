@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <script src="https://kit.fontawesome.com/e0d7e898b5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo_zina_blanc-removebg-preview.png" width="auto" height="50rem">
+              </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto ps-5">
+                <li class="nav-item">
+                             <div class=" input-group col-md-12 " >
+              <input type="text"  placeholder="Rechercher" >
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-warning btn-number">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+                </li>
+
+              </ul>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-user"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="#"><i class="fas fa-heart"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cart.html"><i class="fas fa-cart-plus"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+            
+    <div class="container pt-5">
+        <h6><strong>Panier ()</strong></h6>
+    <div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Article</th>
+            <th scope="col"></th>
+            <th scope="col">Prix unitaire</th>
+            <th scope="col">Quantité</th>
+            <th scope="col">Sous-total</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- <tr>
+            <th scope="row">  <img class="cart-item-image" src="${imageSrc}" width="100" height="100"></th>
+            <td>${title}</td>
+            <td>${price}</td>
+            <td><input class="cart-quantity-input" type="number" id="inputnbr" value="1"></td>
+            <td>shop-item-price*nbr</td>           
+            <td><i class="fas fa-trash-alt"></i></td>
+          </tr> -->
+          <tr>
+            <th scope="row">shop-item-image</th>
+            <td>shop-item-title</td>
+            <td>shop-item-price</td>
+            <td><input type="number" name="" id="inputnbr"></td>
+            <td>shop-item-price*nbr</td>
+            <td><i class="fas fa-trash-alt"></i></td>
+          </tr>
+          <tr>
+            <th scope="row">shop-item-image</th>
+            <td>shop-item-title</td>
+            <td>shop-item-price</td>
+            <td><input type="number" name="" id="inputnbr"></td>
+            <td>shop-item-price*nbr</td>
+            <td><i class="fas fa-trash-alt"></i></td>
+          </tr>
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td></td>
+            <td></td>
+           <td></td>
+           <td>Total : <br>
+            <button class="btn btn-warning btn-sm btn-purchase" type="button">Vider le panier</button>
+            <button type="button" class="btn btn-dark btn-sm">Finaliser la commande</button>
+           </td>
+           <td></td>
+        </tfoot>
+      </table>
+    </div>
+</div>
+      <!-- footer -->
+      <footer>
+        <div class="container ">
+          <div class="row">
+            <div class="col-md-5 col-sm-12 col-12 col-lg-5">
+              <img src="img/logo-zina-noir-removebg-preview (11).png" alt="" class="logo-footer">
+              <P> "ZinaStore" est une plateforme e-commerce destinée à la femme, sa famille et sa maison.  </P>
+             
+                
+            </div>
+            <div class=" col-md-3 col-sm-12 col-12 col-lg-3 pt-5">
+              <h6>LIEN RAPIDE</h6>
+              <ul>
+                <li><a class="link" href=#>Promotion</a></li>
+                <li><a class="link" href=#>Nouveaux produits</a></li>
+                <li><a class="link" href=#>Marques</a></li>
+              </ul>
+            </div>
+           
+            <div class="col-md-4 col-sm-12 col-12 col-lg-4 pt-5">
+              <h6>NEWLETTER</h6>
+              <p>Abonnez-vous à notre Newsletter et découvrez en exclusivité nos meilleures offres</p>
+              <div class=" input-group  " >
+                <input type="text"  placeholder="Recherche" >
+                  <div class="input-group-append">
+                      <button type="button" class="btn btn-warning btn-number">
+                        s'abbonner
+                      </button>
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-6 col-sm-12 col-12 col-lg-6">
+                  <h6>SUIVEZ-NOUS :</h6>
+                </div>
+                <div class="col-md-2 col-sm-12 col-12 col-lg-2">
+                  <a href="#"><i class="fa fa-facebook-square " aria-hidden="true"></i></a></div>
+                <div class="col-md-2 col-sm-12 col-12 col-lg-2 ">
+                  <a href="#"><i class="fa fa-twitter-square " aria-hidden="true"></i></a></div>
+                <div class="col-md-2 col-sm-12 col-12 col-lg-2">
+                  <a href="#"><i class="fa fa-linkedin-square " aria-hidden="true"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+        
+        <!------ --------------------COPY RIGHT ---------------------------------------------------->
+        
+        
+        <hr color="white">
+        <div class="container-fluid pb-3">
+        <div class="col-md-12 text-center">
+        
+        <h8>   ZINA STORE © Copy Right 2021</h8>
+        
+        
+        
+        </div> 
+        </div>
+        </footer>
+    <!-- link bootstrap js -->
+<script src="./js/bootstrap.bundle.js"></script>
+<script src="./js/cart.js"></script>
+</body>
+</html>
