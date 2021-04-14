@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="boutique.html">
                 <img src="img/logo_zina_blanc-removebg-preview.png" width="auto" height="50rem">
               </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,17 +33,22 @@
                 </li>
 
               </ul>
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-user"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link"  href="#"><i class="fas fa-heart"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="cart.html"><i class="fas fa-cart-plus"></i></a>
-              </li>
-            </ul>
+              <ul class="navbar-nav ms-auto">
+                <li>
+                  <a class="nav-link"  href="#"><button onclick="myFunction()"><i class="fas fa-moon"></i></button></a>
+                  
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="cart.html"><i class="fas fa-cart-plus"></i></a>
+                </li>
+  
+                <li>
+                  <a class="nav-link" href="cart.html"><span id="val">0</span></a>
+                  
+                </li>
+  
+              </ul>
           </div>
         </div>
       </nav>
@@ -88,6 +93,15 @@
             <td>shop-item-price*nbr</td>
             <td><i class="fas fa-trash-alt"></i></td>
           </tr>
+          <tr>
+            <th scope="row">  <img class="cart-item-image" src="${imageSrc}" width="100" height="100"></th>
+            <td class="cart-item-title">${title}</td>
+            <td class="cart-price ">${price}</td>
+         
+            <div class="cart-quantity cart-column">
+            <td><input class="cart-quantity-input" type="number" id="inputnbr" value="1"></td>
+            <td><i class="fas fa-trash-alt"></i></td>
+        </div>
         </tbody>
         <tfoot>
             <td></td>

@@ -1,4 +1,13 @@
-var compt = document.querySelectorAll('#btn')
+
+function onLoadShoppingCart(){
+    let productNumber = localStorage.getItem('kl')
+    if(productNumber){
+        document.querySelector('#val').innerHTML = productNumber;
+    }
+}
+
+
+var compt = document.querySelectorAll('.btn')
 console.log(compt[0])
 for(let i=0;i<compt.length;i++){
     compt[i].addEventListener("click", () => {
@@ -17,3 +26,5 @@ function kl(){
         document.getElementById('val').innerHTML=1
     }
 }
+
+ onLoadShoppingCart()
