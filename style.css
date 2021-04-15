@@ -48,6 +48,14 @@ justify-content: end !important;
     border-radius: 50px;
    padding: 10px;
 }
+table .card-img-top {
+    width: 60px;
+    height: 60px;
+
+}
+.card{
+    border-radius: 20px 20px;
+}
 
 
 .sidenav li{
@@ -120,4 +128,10 @@ footer .input-group .btn{
   button{
       border:none;
       background-color: transparent;
+  }
+
+
+  .flex{
+      display: flex;
+      justify-content: space-around;
   }

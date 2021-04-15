@@ -1,4 +1,5 @@
 
+
 function onLoadShoppingCart(){
     let productNumber = localStorage.getItem('kl')
     if(productNumber){

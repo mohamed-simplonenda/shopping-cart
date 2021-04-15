@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
     
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top  bg-light">
         <div class="container">
             <a class="navbar-brand" href="boutique.html">
                 <img src="img/logo_zina_blanc-removebg-preview.png" width="auto" height="50rem">
@@ -38,6 +38,12 @@
                   <a class="nav-link"  href="#"><button onclick="myFunction()"><i class="fas fa-moon"></i></button></a>
                   
                 </li>
+                               <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-user"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="#"><i class="fas fa-heart"></i></a>
+              </li>
 
                 <li class="nav-item">
                   <a class="nav-link" href="cart.html"><i class="fas fa-cart-plus"></i></a>
@@ -56,7 +62,7 @@
     <div class="container pt-5">
         <h6><strong>Panier ()</strong></h6>
     <div class="table-responsive">
-    <table class="table table-striped">
+    <table class="table  table-striped">
         <thead>
           <tr>
             <th scope="col">Article</th>
@@ -67,7 +73,7 @@
             <th scope="col"></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="cart-items">
 
           <!-- <tr>
             <th scope="row">  <img class="cart-item-image" src="${imageSrc}" width="100" height="100"></th>
@@ -75,33 +81,26 @@
             <td>${price}</td>
             <td><input class="cart-quantity-input" type="number" id="inputnbr" value="1"></td>
             <td>shop-item-price*nbr</td>           
-            <td><i class="fas fa-trash-alt"></i></td>
+            <td><button class="btn btn-danger" type="button"><i class="fas fa-trash-alt"></i></button></td>
           </tr> -->
+
           <tr>
-            <th scope="row">shop-item-image</th>
-            <td>shop-item-title</td>
-            <td>shop-item-price</td>
+            <th scope="row"><img src="img/bracelet-animalia-khomssa-noir-cadeaux-jauner-680x680.jpg" class="card-img-top shop-item-image" alt="..." width="50px" height="50px"></th>
+            <td>Bracelet ANIMALIA </td>
+            <td>199.99 TND</td>
             <td><input type="number" name="" id="inputnbr"></td>
-            <td>shop-item-price*nbr</td>
-            <td><i class="fas fa-trash-alt"></i></td>
+            <td>199.99 TND</td>
+            <td><button class="btn btn-danger" type="button"><i class="fas fa-trash-alt"></i></button></td>
           </tr>
           <tr>
-            <th scope="row">shop-item-image</th>
-            <td>shop-item-title</td>
-            <td>shop-item-price</td>
+            <th scope="row"><img src="img/ceinture-pour-femme-en-cuir.jpg-bleu-01.jpg" class="card-img-top shop-item-image" alt="..." width="50px" height="50px"></th>
+            <td>CEINTURE BIJOUX</td>
+            <td>299.99 TND</td>
             <td><input type="number" name="" id="inputnbr"></td>
-            <td>shop-item-price*nbr</td>
-            <td><i class="fas fa-trash-alt"></i></td>
+            <td>299.99 TND</td>
+            <td><button class="btn btn-danger" type="button"><i class="fas fa-trash-alt"></i></button></td>
           </tr>
-          <tr>
-            <th scope="row">  <img class="cart-item-image" src="${imageSrc}" width="100" height="100"></th>
-            <td class="cart-item-title">${title}</td>
-            <td class="cart-price ">${price}</td>
-         
-            <div class="cart-quantity cart-column">
-            <td><input class="cart-quantity-input" type="number" id="inputnbr" value="1"></td>
-            <td><i class="fas fa-trash-alt"></i></td>
-        </div>
+
         </tbody>
         <tfoot>
             <td></td>
@@ -119,6 +118,9 @@
 </div>
 <div class="cart-items">
 </div>
+
+
+
       <!-- footer -->
       <footer>
         <div class="container ">
@@ -183,6 +185,7 @@
         </div>
         </footer>
     <!-- link bootstrap js -->
+    <script src="./js/badge.js"></script>
 <script src="./js/bootstrap.bundle.js"></script>
 <script src="./js/cart.js"></script>
 </body>

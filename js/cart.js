@@ -1,3 +1,6 @@
+
+
+
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
@@ -5,7 +8,7 @@ if (document.readyState == 'loading') {
 }
 
 function ready() {
-    var removeCartItemButtons = document.getElementsByClassName('fas fa-trash-alt')
+    var removeCartItemButtons = document.getElementsByClassName('btn-danger')
     for (var i = 0; i < removeCartItemButtons.length; i++) {
         var button = removeCartItemButtons[i]
         button.addEventListener('click', removeCartItem)
@@ -25,8 +28,6 @@ function ready() {
 
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
-
-
 
 function purchaseClicked() {
     alert('Thank you for your purchase')
@@ -51,11 +52,6 @@ function quantityChanged(event) {
     updateCartTotal()
 }
 
-
-
-
-
-
 function addToCartClicked(event) {
     var button = event.target
     var shopItem = button.parentElement.parentElement.parentElement.parentElement
@@ -78,21 +74,20 @@ function addItemToCart(title, price, imageSrc) {
         }
     }
     var cartRowContents = `
-    <tr>
-    <th scope="row">  <img class="cart-item-image" src="${imageSrc}" width="100" height="100"></th>
-    <td class="cart-item-title">${title}</td>
-    <td class="cart-price ">${price}</td>
- 
-    <div class="cart-quantity cart-column">
-    <td><input class="cart-quantity-input" type="number" id="inputnbr" value="1"></td>
-    <td><i class="fas fa-trash-alt"></i></td>
-</div></tr>`
+        <div class="cart-item cart-column">
+            <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
+            <span class="cart-item-title">${title}</span>
+        </div>
+        <span class="cart-price cart-column">${price}</span>
+        <div class="cart-quantity cart-column">
+            <input class="cart-quantity-input" type="number" value="1">
+            <button class="btn btn-danger" type="button">REMOVE</button>
+        </div>`
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
-    cartRowd.getElementsByClassName('fas fa-trash-alt')[0].addEventListener('click', removeCartItem)
+    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
-
 
 function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-items')[0]
