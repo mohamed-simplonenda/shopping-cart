@@ -1,14 +1,14 @@
 
 
 
-if (document.readyState == 'loading') {
-    document.addEventListener('DOMContentLoaded', ready)
-} else {
-    ready()
-}
+// if (document.readyState == 'loading') {
+//     document.addEventListener('DOMContentLoaded', ready)
+// } else {
+//     ready()
+// }
 
-function ready() {
-    var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+// function ready() {}
+    var removeCartItemButtons = document.getElementsByClassName('btn-warning')
     for (var i = 0; i < removeCartItemButtons.length; i++) {
         var button = removeCartItemButtons[i]
         button.addEventListener('click', removeCartItem)
@@ -27,7 +27,7 @@ function ready() {
     }
 
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
-}
+
 
 function purchaseClicked() {
     alert('Thank you for your purchase')
@@ -69,7 +69,7 @@ function addItemToCart(title, price, imageSrc) {
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for (var i = 0; i < cartItemNames.length; i++) {
         if (cartItemNames[i].innerText == title) {
-            alert('This item is already added to the cart')
+            quantity++
             return
         }
     }
@@ -80,12 +80,12 @@ function addItemToCart(title, price, imageSrc) {
         </div>
         <span class="cart-price cart-column">${price}</span>
         <div class="cart-quantity cart-column">
-            <input class="cart-quantity-input" type="number" value="1">
-            <button class="btn btn-danger" type="button">REMOVE</button>
-        </div>`
+            <input class="cart-quantity-input" type="number" id="inputnbr" value="1">
+            <button class="btn btn-warning" type="button"><i class="fas fa-trash-alt"></i></button>
+        </div><hr>`
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
-    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
+    cartRow.getElementsByClassName('btn-warning')[0].addEventListener('click', removeCartItem)
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
 
@@ -97,10 +97,10 @@ function updateCartTotal() {
         var cartRow = cartRows[i]
         var priceElement = cartRow.getElementsByClassName('cart-price')[0]
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
-        var price = parseFloat(priceElement.innerText.replace('$', ''))
+        var price = parseFloat(priceElement.innerText.replace('TND', ''))
         var quantity = quantityElement.value
         total = total + (price * quantity)
     }
     total = Math.round(total * 100) / 100
-    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+    document.getElementsByClassName('cart-total-price')[0].innerText =   total + 'TND'
 }

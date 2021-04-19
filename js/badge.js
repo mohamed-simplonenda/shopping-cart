@@ -3,7 +3,7 @@
 function onLoadShoppingCart(){
     let productNumber = localStorage.getItem('kl')
     if(productNumber){
-        document.querySelector('#val').innerHTML = productNumber;
+        document.querySelectorall('#val').innerHTML = productNumber;
     }
 }
 

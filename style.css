@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap%27'); */
 
 *{
     font-family: 'Cormorant Garamond', serif;
@@ -41,13 +42,17 @@ justify-content: end !important;
 }
 #inputnbr{
     width: 50px;
+    margin-right: 5rem;
 
 }
-#val{
+.cart-item-image{
+    margin-right: 5rem;
+}
+/* #val{
     background-color: var(--doré);
     border-radius: 50px;
    padding: 10px;
-}
+} */
 table .card-img-top {
     width: 60px;
     height: 60px;
@@ -131,7 +136,24 @@ footer .input-group .btn{
   }
 
 
-  .flex{
-      display: flex;
-      justify-content: space-around;
-  }
+  .cart-column {
+    display:inline-block;
+    padding-left: 5rem;
+    
+}
+.prix{
+
+padding-left: 20rem;
+}
+.qte{
+    padding-left: 4rem;
+}
+.section-header{
+    padding-left: 5rem;
+}
+.cart-total{
+    margin-left: 50rem;
+}
+.cart-column .cart-item-title{
+    width: 50px !important;
+}
